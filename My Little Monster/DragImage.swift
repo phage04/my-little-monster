@@ -12,6 +12,7 @@ import UIKit
 class DragImg: UIImageView {
     
     var originalPosition: CGPoint!
+    var dropTarget: UIView?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -15,6 +15,7 @@
 		DE9F7B4F1C6DB886005B95DD /* My_Little_MonsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F7B4E1C6DB886005B95DD /* My_Little_MonsterTests.swift */; };
 		DE9F7B5A1C6DB886005B95DD /* My_Little_MonsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F7B591C6DB886005B95DD /* My_Little_MonsterUITests.swift */; };
 		DE9F7B681C6DF314005B95DD /* DragImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F7B671C6DF314005B95DD /* DragImage.swift */; };
+		DE9F7B6A1C6E12F4005B95DD /* MonsterImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F7B691C6E12F4005B95DD /* MonsterImg.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DE9F7B591C6DB886005B95DD /* My_Little_MonsterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Little_MonsterUITests.swift; sourceTree = "<group>"; };
 		DE9F7B5B1C6DB886005B95DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE9F7B671C6DF314005B95DD /* DragImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImage.swift; sourceTree = "<group>"; };
+		DE9F7B691C6E12F4005B95DD /* MonsterImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImg.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				DE9F7B421C6DB886005B95DD /* LaunchScreen.storyboard */,
 				DE9F7B451C6DB886005B95DD /* Info.plist */,
 				DE9F7B671C6DF314005B95DD /* DragImage.swift */,
+				DE9F7B691C6E12F4005B95DD /* MonsterImg.swift */,
 			);
 			path = "My Little Monster";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9F7B6A1C6E12F4005B95DD /* MonsterImg.swift in Sources */,
 				DE9F7B3C1C6DB886005B95DD /* ViewController.swift in Sources */,
 				DE9F7B681C6DF314005B95DD /* DragImage.swift in Sources */,
 				DE9F7B3A1C6DB886005B95DD /* AppDelegate.swift in Sources */,
