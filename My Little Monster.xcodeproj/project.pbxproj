@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE89DE6D1C6F3C9D00CA9E58 /* bite.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE89DE681C6F3C9D00CA9E58 /* bite.wav */; };
+		DE89DE6E1C6F3C9D00CA9E58 /* skull.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE89DE691C6F3C9D00CA9E58 /* skull.wav */; };
+		DE89DE6F1C6F3C9D00CA9E58 /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE89DE6A1C6F3C9D00CA9E58 /* death.wav */; };
+		DE89DE701C6F3C9D00CA9E58 /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE89DE6B1C6F3C9D00CA9E58 /* heart.wav */; };
+		DE89DE711C6F3C9D00CA9E58 /* cave-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE89DE6C1C6F3C9D00CA9E58 /* cave-music.mp3 */; };
 		DE9F7B3A1C6DB886005B95DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F7B391C6DB886005B95DD /* AppDelegate.swift */; };
 		DE9F7B3C1C6DB886005B95DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F7B3B1C6DB886005B95DD /* ViewController.swift */; };
 		DE9F7B3F1C6DB886005B95DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9F7B3D1C6DB886005B95DD /* Main.storyboard */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE89DE681C6F3C9D00CA9E58 /* bite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bite.wav; sourceTree = "<group>"; };
+		DE89DE691C6F3C9D00CA9E58 /* skull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skull.wav; sourceTree = "<group>"; };
+		DE89DE6A1C6F3C9D00CA9E58 /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
+		DE89DE6B1C6F3C9D00CA9E58 /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
+		DE89DE6C1C6F3C9D00CA9E58 /* cave-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cave-music.mp3"; sourceTree = "<group>"; };
 		DE9F7B361C6DB886005B95DD /* My Little Monster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Little Monster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9F7B391C6DB886005B95DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE9F7B3B1C6DB886005B95DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +111,11 @@
 		DE9F7B381C6DB886005B95DD /* My Little Monster */ = {
 			isa = PBXGroup;
 			children = (
+				DE89DE681C6F3C9D00CA9E58 /* bite.wav */,
+				DE89DE691C6F3C9D00CA9E58 /* skull.wav */,
+				DE89DE6A1C6F3C9D00CA9E58 /* death.wav */,
+				DE89DE6B1C6F3C9D00CA9E58 /* heart.wav */,
+				DE89DE6C1C6F3C9D00CA9E58 /* cave-music.mp3 */,
 				DE9F7B391C6DB886005B95DD /* AppDelegate.swift */,
 				DE9F7B3B1C6DB886005B95DD /* ViewController.swift */,
 				DE9F7B3D1C6DB886005B95DD /* Main.storyboard */,
@@ -235,9 +250,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE89DE6D1C6F3C9D00CA9E58 /* bite.wav in Resources */,
+				DE89DE711C6F3C9D00CA9E58 /* cave-music.mp3 in Resources */,
+				DE89DE6F1C6F3C9D00CA9E58 /* death.wav in Resources */,
+				DE89DE701C6F3C9D00CA9E58 /* heart.wav in Resources */,
 				DE9F7B441C6DB886005B95DD /* LaunchScreen.storyboard in Resources */,
 				DE9F7B411C6DB886005B95DD /* Assets.xcassets in Resources */,
 				DE9F7B3F1C6DB886005B95DD /* Main.storyboard in Resources */,
+				DE89DE6E1C6F3C9D00CA9E58 /* skull.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +512,7 @@
 				DE9F7B601C6DB886005B95DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE9F7B611C6DB886005B95DD /* Build configuration list for PBXNativeTarget "My Little MonsterTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +521,7 @@
 				DE9F7B631C6DB886005B95DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE9F7B641C6DB886005B95DD /* Build configuration list for PBXNativeTarget "My Little MonsterUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +530,7 @@
 				DE9F7B661C6DB886005B95DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
