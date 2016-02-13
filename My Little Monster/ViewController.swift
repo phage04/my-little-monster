@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     
     var penalties = 0
     var timer: NSTimer!
+    var monsterHappy = false
+    var currentItem: UInt32 = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,23 +44,32 @@ class ViewController: UIViewController {
     
     func itemDroppedOnCharacter(notif: AnyObject) {
         
-        print("ITEMDROPPED")
-        
+        monsterHappy = true
+        startTimer()
+     
+        foodImg.alpha = DIM_ALPHA
+        foodImg.userInteractionEnabled = false
+        heartImg.alpha = DIM_ALPHA
+        heartImg.userInteractionEnabled = false
         
     }
     
     func startTimer() {
         
         if timer != nil{
+            
             timer.invalidate()
+            
         }
         
-        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "changeGameState", userInfo: nil, repeats: true)
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "changeGameState", userInfo: nil, repeats: true)
         
     }
     
     func changeGameState(){
         
+    if !monsterHappy {
         penalties++
         
         if penalties == 1 {
@@ -82,9 +93,31 @@ class ViewController: UIViewController {
             gameOver()
         }
     }
+        let rand = arc4random_uniform(2)    //0 or 1
+        
+        if rand == 0 {
+            foodImg.alpha = DIM_ALPHA
+            foodImg.userInteractionEnabled = false
+            
+            heartImg.alpha  = OPAQUE
+            heartImg.userInteractionEnabled = true
+            
+        } else {
+            
+            foodImg.alpha = OPAQUE
+            foodImg.userInteractionEnabled = true
+            
+            heartImg.alpha  = DIM_ALPHA
+            heartImg.userInteractionEnabled = false
+            
+            
+        }
+        currentItem = rand
+        monsterHappy = false
+    }
     
-    func gameOver(){
-
+    func gameOver() {
+        
         timer.invalidate()
         monsterImg.playDeathAnimation()
     }
