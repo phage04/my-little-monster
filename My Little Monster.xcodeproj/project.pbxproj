@@ -12,6 +12,7 @@
 		DE89DE6F1C6F3C9D00CA9E58 /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE89DE6A1C6F3C9D00CA9E58 /* death.wav */; };
 		DE89DE701C6F3C9D00CA9E58 /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE89DE6B1C6F3C9D00CA9E58 /* heart.wav */; };
 		DE89DE711C6F3C9D00CA9E58 /* cave-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE89DE6C1C6F3C9D00CA9E58 /* cave-music.mp3 */; };
+		DE89DE731C6F4A1200CA9E58 /* MinerImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DE721C6F4A1200CA9E58 /* MinerImg.swift */; };
 		DE9F7B3A1C6DB886005B95DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F7B391C6DB886005B95DD /* AppDelegate.swift */; };
 		DE9F7B3C1C6DB886005B95DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F7B3B1C6DB886005B95DD /* ViewController.swift */; };
 		DE9F7B3F1C6DB886005B95DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9F7B3D1C6DB886005B95DD /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		DE89DE6A1C6F3C9D00CA9E58 /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
 		DE89DE6B1C6F3C9D00CA9E58 /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
 		DE89DE6C1C6F3C9D00CA9E58 /* cave-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cave-music.mp3"; sourceTree = "<group>"; };
+		DE89DE721C6F4A1200CA9E58 /* MinerImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinerImg.swift; sourceTree = "<group>"; };
 		DE9F7B361C6DB886005B95DD /* My Little Monster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Little Monster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9F7B391C6DB886005B95DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE9F7B3B1C6DB886005B95DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				DE9F7B451C6DB886005B95DD /* Info.plist */,
 				DE9F7B671C6DF314005B95DD /* DragImage.swift */,
 				DE9F7B691C6E12F4005B95DD /* MonsterImg.swift */,
+				DE89DE721C6F4A1200CA9E58 /* MinerImg.swift */,
 			);
 			path = "My Little Monster";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				DE9F7B6A1C6E12F4005B95DD /* MonsterImg.swift in Sources */,
 				DE9F7B3C1C6DB886005B95DD /* ViewController.swift in Sources */,
 				DE9F7B681C6DF314005B95DD /* DragImage.swift in Sources */,
+				DE89DE731C6F4A1200CA9E58 /* MinerImg.swift in Sources */,
 				DE9F7B3A1C6DB886005B95DD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

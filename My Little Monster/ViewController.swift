@@ -18,6 +18,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
     @IBOutlet weak var restartBtn: UIButton!
+    @IBOutlet weak var golemBtn: UIButton!
+    @IBOutlet weak var humanBtn: UIButton!
+    @IBOutlet weak var minerImg: MinerImg!
+    @IBOutlet weak var panelImg: UIImageView!
     
     let DIM_ALPHA: CGFloat = 0.2
     let OPAQUE: CGFloat = 1.0
@@ -34,10 +38,35 @@ class ViewController: UIViewController {
     var sfxDeath: AVAudioPlayer!
     var sfxSkull: AVAudioPlayer!
     
+    var chosenCharacter: Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         restartBtn.hidden = true
+        monsterImg.hidden = true
+        minerImg.hidden  = true
+  
+        
+        humanBtn.hidden = false
+        golemBtn.hidden = false
+        
+        panelImg.hidden = true
+        penalty1Img.hidden = true
+        penalty2Img.hidden = true
+        penalty3Img.hidden   = true
+        heartImg.hidden = true
+        foodImg.hidden = true
+    
+        
+        
+    }
+    
+    func playGolem(){
+        golemBtn.hidden = true
+        humanBtn.hidden = true
+        monsterImg.hidden = false
+        minerImg.hidden = true
         monsterImg.playIdleAnimation()
         penalties = 0
         foodImg.dropTarget = monsterImg
@@ -46,9 +75,9 @@ class ViewController: UIViewController {
         penalty1Img.alpha = DIM_ALPHA
         penalty2Img.alpha = DIM_ALPHA
         penalty3Img.alpha = DIM_ALPHA
-    
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
-
+        
         do{
             
             let resourcePath = NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!
@@ -60,7 +89,7 @@ class ViewController: UIViewController {
             try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("heart", ofType: "wav")!))
             try sfxDeath = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("death", ofType: "wav")!))
             try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
-        
+            
             musicPlayer.prepareToPlay()
             musicPlayer.play()
             
@@ -74,9 +103,49 @@ class ViewController: UIViewController {
         }
         
         startTimer()
+    }
+    
+    func playHuman(){
+        golemBtn.hidden = true
+        humanBtn.hidden = true
+        minerImg.hidden = false
+        monsterImg.hidden = true
+        minerImg.playIdleAnimation()
+        penalties = 0
+        foodImg.dropTarget = minerImg
+        heartImg.dropTarget = minerImg
         
+        penalty1Img.alpha = DIM_ALPHA
+        penalty2Img.alpha = DIM_ALPHA
+        penalty3Img.alpha = DIM_ALPHA
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
         
+        do{
+            
+            let resourcePath = NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!
+            let url = NSURL(fileURLWithPath: resourcePath)
+            
+            try musicPlayer = AVAudioPlayer(contentsOfURL: url)
+            
+            try sfxBite = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bite", ofType: "wav")!))
+            try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("heart", ofType: "wav")!))
+            try sfxDeath = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("death", ofType: "wav")!))
+            try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
+            
+            musicPlayer.prepareToPlay()
+            musicPlayer.play()
+            
+            sfxBite.prepareToPlay()
+            sfxDeath.prepareToPlay()
+            sfxHeart.prepareToPlay()
+            sfxSkull.prepareToPlay()
+            
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
+        startTimer()
     }
     
     func itemDroppedOnCharacter(notif: AnyObject) {
@@ -163,16 +232,59 @@ class ViewController: UIViewController {
     func gameOver() {
         sfxDeath.play()
         timer.invalidate()
-        monsterImg.playDeathAnimation()
+        
+        if chosenCharacter == true {
+            monsterImg.playDeathAnimation()
+        } else{
+            minerImg.playDeathAnimation()
+        }
+
         restartBtn.hidden = false
+
     }
 
     @IBAction func restartBtnPressed(sender: AnyObject) {
+        
         viewDidLoad()
+        restartBtn.hidden = true
+        panelImg.hidden = false
+        penalty1Img.hidden = false
+        penalty2Img.hidden = false
+        penalty3Img.hidden   = false
+        heartImg.hidden = false
+        foodImg.hidden = false
+        if chosenCharacter == true {
+            playGolem()
+        } else {
+            playHuman()
+        }
         
     }
 
+    @IBAction func golemBtnPressed(sender: AnyObject) {
+        
+        chosenCharacter = true
+        panelImg.hidden = false
+        penalty1Img.hidden = false
+        penalty2Img.hidden = false
+        penalty3Img.hidden   = false
+        heartImg.hidden = false
+        foodImg.hidden = false
+        playGolem()
+    }
 
+    @IBAction func humanBtnPressed(sender: AnyObject) {
+        
+
+        chosenCharacter = false
+        panelImg.hidden = false
+        penalty1Img.hidden = false
+        penalty2Img.hidden = false
+        penalty3Img.hidden   = false
+        heartImg.hidden = false
+        foodImg.hidden = false
+        playHuman()
+    }
 
 
 }
