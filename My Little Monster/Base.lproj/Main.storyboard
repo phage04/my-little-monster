@@ -149,15 +149,15 @@
                                 <exclude reference="cNE-Dh-MyY"/>
                                 <exclude reference="g3L-Xl-S5g"/>
                                 <exclude reference="sRW-HP-WTm"/>
-                                <exclude reference="0c5-F9-kfh"/>
-                                <exclude reference="BeU-Fg-wMc"/>
-                                <exclude reference="EM3-dE-IxV"/>
-                                <exclude reference="wa9-U3-UNO"/>
                                 <exclude reference="3oR-VS-aXk"/>
                                 <exclude reference="Rnl-Wx-BMF"/>
                                 <exclude reference="TfT-Z1-mCj"/>
                                 <exclude reference="iGb-Tw-w3S"/>
                                 <exclude reference="xUa-79-Hyk"/>
+                                <exclude reference="0c5-F9-kfh"/>
+                                <exclude reference="BeU-Fg-wMc"/>
+                                <exclude reference="EM3-dE-IxV"/>
+                                <exclude reference="wa9-U3-UNO"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -175,8 +175,11 @@
                     </view>
                     <connections>
                         <outlet property="foodImg" destination="cpd-d4-Bdf" id="Tpf-1P-S7m"/>
-                        <outlet property="hearImg" destination="3iR-WR-1iZ" id="luR-sT-6do"/>
+                        <outlet property="heartImg" destination="3iR-WR-1iZ" id="oPY-wy-Ldb"/>
                         <outlet property="monsterImg" destination="sai-oF-hV2" id="zfh-SH-bZC"/>
+                        <outlet property="penalty1Img" destination="ydu-D3-0HA" id="1ls-GN-5Ky"/>
+                        <outlet property="penalty2Img" destination="OOG-Ua-CTn" id="Tfb-Oq-976"/>
+                        <outlet property="penalty3Img" destination="AkK-aE-No3" id="3lR-ge-RcE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
