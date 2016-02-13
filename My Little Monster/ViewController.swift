@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty1Img: UIImageView!
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
+    @IBOutlet weak var restartBtn: UIButton!
     
     let DIM_ALPHA: CGFloat = 0.2
     let OPAQUE: CGFloat = 1.0
@@ -36,6 +37,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        restartBtn.hidden = true
+        monsterImg.playIdleAnimation()
+        penalties = 0
         foodImg.dropTarget = monsterImg
         heartImg.dropTarget = monsterImg
         
@@ -160,8 +164,13 @@ class ViewController: UIViewController {
         sfxDeath.play()
         timer.invalidate()
         monsterImg.playDeathAnimation()
+        restartBtn.hidden = false
     }
 
+    @IBAction func restartBtnPressed(sender: AnyObject) {
+        viewDidLoad()
+        
+    }
 
 
 
